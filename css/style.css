@@ -49,22 +49,35 @@ header nav .wrap .menu ul{
     height: 80px;
     display: flex;
 }
+
 header nav .wrap .menu ul li{
     margin-right: 50px;
 }
 header nav .wrap .menu ul li:last-child{
     margin-right: 0;
 }
-header nav .wrap .menu ul li:hover{
-    border-bottom: 4px solid #662021;
+header nav .wrap .menu > ul > li:hover a{
+    /* border-bottom: 4px solid #662021; */
     color: #662021;
 }
-/* header nav .wrap .menu ul li:hover{
-    transition: wid
-} */
+header nav .wrap .menu > ul > li::after{
+    content: "";
+    display: block;
+    /* position: absolute; */
+    height: 4px;
+    width: 0%;
+    /* bottom: 0;
+    left: 0; */
+    background-color: #662021;;
+    transition: width 0.5s;
+}
+
+header nav .wrap .menu > ul > li:hover::after{
+    width: 100%;
+ }
 
 header nav .wrap .menu ul li a{
-    line-height: 80px; 
+    line-height: 76px; 
     font-size: 14px;
     color: #565656;
     text-transform: uppercase;
